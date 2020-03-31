@@ -21,8 +21,8 @@ if (sys.platform == 'win32'):
   TEST_X64_SHELLCODE = ALPHA3.io.ReadFile(TEST_X64_SHELLCODE_FILE);
   
   TEST_SHELLCODE_OUTPUT = "Hello, world!\r\n"
-else:
-  raise OSError("Unsupported platform for testing.");
+#else:
+#  raise OSError("Unsupported platform for testing.");
 
 def TestEncoder(encoder_settings, base_address, int3):
   assert "tests" in encoder_settings and encoder_settings["tests"], (
